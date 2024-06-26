@@ -10,26 +10,15 @@
             "request": "launch",
             "program": "scripts/train.py",
             "args": [
-                "data=nuscenes",
+                "model=gkt",
+                "visualization=nuscenes_viz",
+                "data=nuscenes_road",
                 "data.version=v1.0-mini",
-                "data.dataset_dir=/data/nuscenes"
+                "data.dataset_dir=/data/nuscenes",
+                "data.labels_dir=/data/cvt_labels_nuscenes",
             ],
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/segmentation/"
         },
-        {
-            "name": "Generate labels",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "scripts/generate_data.py",
-            "args": [
-                "data=nuscenes",
-                "data.version=v1.0-mini",
-                "data.dataset_dir=/data/nuscenes",
-                "data.labels_dir=/data/cvt_labels_nuscenes"
-            ],
-            "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}/segmentation/"
-        }
     ]
 }

@@ -1,5 +1,8 @@
 # output dir
-outputs/
+/segmentation/outputs/
+
+# logs
+/segmentation/logs/
 
 *.diff
 # compilation and distribution
