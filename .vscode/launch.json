@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Training",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "scripts/train.py",
+            "args": [
+                "data=nuscenes",
+                "data.version=v1.0-mini",
+                "data.dataset_dir=/data/nuscenes"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/segmentation/"
+        },
+        {
+            "name": "Generate labels",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "scripts/generate_data.py",
+            "args": [
+                "data=nuscenes",
+                "data.version=v1.0-mini",
+                "data.dataset_dir=/data/nuscenes",
+                "data.labels_dir=/data/cvt_labels_nuscenes"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/segmentation/"
+        }
+    ]
+}

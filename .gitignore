@@ -1,7 +1,6 @@
 # output dir
-output
+outputs/
 
-*.json
 *.diff
 # compilation and distribution
 __pycache__
@@ -34,7 +33,6 @@ model_ts*.txt
 
 # editor settings
 .idea
-.vscode
 _darcs
 .DS_Store
 

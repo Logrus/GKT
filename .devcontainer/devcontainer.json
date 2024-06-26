@@ -1,0 +1,23 @@
+{
+    "name": "GKT",
+    "build": {
+        "context": "..",
+        "dockerfile": "Dockerfile"
+    },
+    "mounts": [
+        "source=/home/${localEnv:USER}/data/nuscenes,target=/data,type=bind,consistency=cached"
+    ],
+    "runArgs": [
+        "--gpus",
+        "all"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install -e segmentation"
+}
